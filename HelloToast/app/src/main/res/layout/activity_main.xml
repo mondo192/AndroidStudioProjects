@@ -14,6 +14,7 @@
         android:id="@+id/button_toast"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="0"
         android:background="@color/colorPrimary"
         android:text="@string/button_label_toast"
         android:textColor="@android:color/white" />
@@ -34,6 +35,7 @@
         android:id="@+id/button_count"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="0"
         android:background="@color/colorPrimary"
         android:text="@string/button_label_count"
         android:textColor="@android:color/white" />
