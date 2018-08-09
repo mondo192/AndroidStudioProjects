@@ -4,9 +4,13 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    private int mCount;
+    private TextView mShowCount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,6 +18,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Log.d("MainActivity", "Hello, Toast!");
+
+        mCount = 0;
+        mShowCount = findViewById(R.id.show_count);
     }
 
     public void showToast(View view) {
@@ -22,5 +29,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void countUp(View view) {
+        ++mCount;
+        mShowCount.setText(Integer.toString(mCount));
     }
 }
