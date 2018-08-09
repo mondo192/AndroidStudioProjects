@@ -12,19 +12,20 @@
 
     <Button
         android:id="@+id/button_toast"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="0"
         android:background="@color/colorPrimary"
-        android:text="@string/button_label_toast"
         android:onClick="showToast"
+        android:text="@string/button_label_toast"
         android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/show_count"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="2"
+        android:layout_alignTop="@+id/button_toast"
+        android:layout_toEndOf="@+id/button_toast"
+        android:layout_toRightOf="@+id/button_toast"
         android:background="@color/myBackgroundColor"
         android:gravity="center"
         android:text="@string/count_initial_value"
@@ -34,12 +35,14 @@
 
     <Button
         android:id="@+id/button_count"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="0"
+        android:layout_alignStart="@+id/button_toast"
+        android:layout_below="@+id/button_toast"
         android:background="@color/colorPrimary"
-        android:text="@string/button_label_count"
         android:onClick="countUp"
-        android:textColor="@android:color/white" />
+        android:text="@string/button_label_count"
+        android:textColor="@android:color/white"
+        android:layout_alignLeft="@+id/button_toast" />
 
 </RelativeLayout>
