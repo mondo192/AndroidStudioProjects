@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     // which button
     // what should happen
 
-    // 1.  Long way implements listen interface to list to types of events required
+    // 1.  Long way implements listener interface to list to types of events required
 
     // 2. Medium way uses anonymous classes
 
