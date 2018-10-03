@@ -6,12 +6,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class MyPass extends Activity implements View.OnClickListener {
+public class MyPass extends MainActivity implements View.OnClickListener {
     Button btn;
 
     @Override
     public void onCreate(Bundle icicle) {
         // other on create code goes here
+        super.onCreate(icicle);
+        setContentView(R.layout.activity_main);
 
         // 1.
         btn = (Button) findViewById(R.id.button);
