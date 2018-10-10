@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Lab4</string>
+    <string name="red">Red</string>
+    <string name="green">Green</string>
 </resources>
