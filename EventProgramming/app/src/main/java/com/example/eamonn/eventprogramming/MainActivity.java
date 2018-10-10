@@ -1,12 +1,14 @@
 package com.example.eamonn.eventprogramming;
 
-import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -38,13 +40,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn3 = (Button) findViewById(R.id.button3);
 
         // 5. Send entered text to toast
-        textView = (EditText) findViewById(R.id.textView);
-        textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick() {
-                Toast
-            }
-        });
+        EditText text;
+        TextView label;
 
 
 
@@ -52,7 +49,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        Toast.makeText(this,  "Button 1 was clicked!", Toast.LENGTH_SHORT).show();
+        if (v.getId()  == R.id.button1)
+            Toast.makeText(getApplicationContext(),  "Button 1 was clicked!", Toast.LENGTH_SHORT).show();
+        else
+            Toast.makeText(getApplicationContext(), "Button 2 was clicked", Toast.LENGTH_SHORT). show();
+
+        label.setText(text.getText().toString());
     }
 
     public void sendToast(View v) {
