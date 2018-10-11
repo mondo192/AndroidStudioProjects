@@ -18,8 +18,7 @@ public class GreenFlashlightActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(),  MainActivity.class);
-                startActivity(intent);
+                finish();
             }
         });
     }
