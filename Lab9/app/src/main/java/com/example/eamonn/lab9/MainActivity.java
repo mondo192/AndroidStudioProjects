@@ -10,6 +10,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -62,6 +63,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     public void onStatusChanged(String provider, int status, Bundle extras) { }
 
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+
         switch (requestCode) {
             case MY_PERMISSION_GPS:
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
@@ -75,10 +77,12 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
     protected void onResume() {
         super.onResume();
+        Log.d("TrackingState", "Resuming location tracking");
     }
 
     protected  void onPause() {
         super.onPause();
+        Log.d("TrackingState", "Paused location tracking");
     }
 
 }
