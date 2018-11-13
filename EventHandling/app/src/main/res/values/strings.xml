@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">EventHandling</string>
+    <string name="button_message">Click Here</string>
+</resources>

@@ -1,7 +1,10 @@
 *.iml
 .gradle
 /local.properties
+<<<<<<< HEAD
 /.idea/caches/build_file_checksums.ser
+=======
+>>>>>>> 3d1f3a5b56a4c5b930a0c51cf4face38843f9878
 /.idea/libraries
 /.idea/modules.xml
 /.idea/workspace.xml

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
     package="com.example.eamonn.helloworld">
+=======
+    package="com.example.helloworld">
+>>>>>>> 3d1f3a5b56a4c5b930a0c51cf4face38843f9878
 
     <application
         android:allowBackup="true"

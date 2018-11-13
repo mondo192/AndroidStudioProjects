@@ -1,3 +1,8 @@
 <resources>
+<<<<<<< HEAD
     <string name="app_name">Hello World</string>
+=======
+    <string name="app_name">Lab1</string>
+    <string name="hello">AndroidStudio</string>
+>>>>>>> 3d1f3a5b56a4c5b930a0c51cf4face38843f9878
 </resources>
