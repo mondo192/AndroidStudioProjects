@@ -3,6 +3,8 @@ package com.example.eamonn.lab9;
 import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -14,9 +16,14 @@ import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity implements LocationListener {
 
     private TextView locationText;
+    private TextView translatedLocation;
     private LocationManager locationManager;
     private long minTime = 500;
     private float minDistance = 1;
@@ -27,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         locationText = findViewById(R.id.location);
+        translatedLocation = findViewById(R.id.translatedLocation);
         setUpLocation();
     }
 
@@ -47,7 +55,24 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     }
 
     public void onLocationChanged(Location location) {
+
         String latestLocation = "";
+        Geocoder geo = new Geocoder(MainActivity.this.getApplicationContext(), Locale.getDefault());
+
+        List<Address> addresses = null;
+        try {
+            addresses = geo.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
+
+            if (addresses.size() > 0) {
+                String addressName = addresses.get(0).getFeatureName() + ", " +
+                        addresses.get(0).getLocality() + ", " +
+                        addresses.get(0).getAdminArea() + ", " +
+                        addresses.get(0).getCountryName();
+                translatedLocation.setText(addressName);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         if (location != null) {
             latestLocation = String.format("Current Location: Latitude %1$s Longitude: %2$s",
