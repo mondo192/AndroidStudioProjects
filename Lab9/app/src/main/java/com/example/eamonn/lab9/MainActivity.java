@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         if (location != null) {
             latestLocation = String.format("Current Location: Latitude %1$s Longitude: %2$s",
                     Math.round(location.getLatitude()), Math.round(location.getLongitude()));
+
         }
         locationText.setText("GPS Location" + "\n" + latestLocation);
     }
