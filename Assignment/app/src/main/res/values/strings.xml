@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Assignment</string>
+    <string name="welcome_title">Welcome to AppName</string>
+    <string name="welcome_description">Create an account to save your tasks and them anywhere. It\'s free. Forever.</string>
+    <string name="welcome_continue">Continue with email</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="login_btn">Log in</string>
+    <string name="register_btn">Register now</string>
+    <string name="login_do_sign_up">No account? Create one now.</string>
+    <string name="register_do_log_in">Already have an account? Log in</string>
+    <string name="title_activity_create_task">CreateTaskActivity</string>
+
+</resources>
