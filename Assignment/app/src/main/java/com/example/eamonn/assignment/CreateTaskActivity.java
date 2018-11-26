@@ -7,21 +7,10 @@ import android.view.View;
 
 public class CreateTaskActivity extends AppCompatActivity {
 
-    private FloatingActionButton mFab;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_task);
 
-        mFab = (FloatingActionButton) findViewById(R.id.fab);
-
-
-        mFab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                
-            }
-        });
     }
 }
